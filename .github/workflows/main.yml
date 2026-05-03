@@ -14,8 +14,7 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
       - uses: android-actions/setup-android@v3
-      - run: chmod +x gradlew
-      - run: ./gradlew assembleRelease
+      - run: gradle assembleRelease
       - uses: actions/upload-artifact@v4
         with:
           name: NiftyPredictor-APK
